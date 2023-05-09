@@ -7,8 +7,8 @@
 //  */
 var twoSum = function (nums, target) {
   for (let i = 0; i < nums.length; i++) {
-    for (j = 0; j < nums.length; j++) {
-      if (i !== j && nums[i] + nums[j] === target) {
+    for (j = i + 1; j < nums.length; j++) {
+      if (nums[i] + nums[j] === target) {
         return [i, j];
       }
     }
@@ -23,10 +23,10 @@ const zed = [
   { id: 3, name: "mosh" },
   // { id: 3, name: "alon" },
 ];
-console.log(zed.concat( { id: 3, name: "alon" }));
+console.log(zed.concat({ id: 3, name: "alon" }));
 
 const obj = {};
-zed.forEach(i=>{
-  obj[i.name] = i.id
-})
+zed.forEach((i) => {
+  obj[i.name] = i.id;
+});
 console.log(obj);
